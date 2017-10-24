@@ -1,26 +1,17 @@
 {
-  "name": "jobs_proj",
-  "version": "1.0.0",
-  "description": "Express app for jobs",
-  "main": "app.js",
+  "name": "jobs-proj",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sblasa/jobs_proj.git"
-  },
-  "keywords": [
-    "express",
-    "webapp"
-  ],
-  "author": "sblasa",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sblasa/jobs_proj/issues"
-  },
-  "homepage": "https://github.com/sblasa/jobs_proj#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
   }
 }
