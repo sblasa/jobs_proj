@@ -1,8 +1,39 @@
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+  color: cornflowerblue;
+
 }
 
-a {
-  color: #00B7FF;
+header {
+
+  background-color: white;
+}
+
+
+.navbar-brand {
+  padding: 0px;
+  background-color: white;    
+}
+
+.navbar-nav {
+  height: 110px;
+  color: cornflowerblue;
+  font-size: 1.5em;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: #e7e7e7;
+  background-color: white;
+}
+.navbar-inverse {
+  background-color: #f2dede;
+  border-color: white;
+}
+.navbar-default .navbar-nav>li>a {
+  color: cornflowerblue;
+}
+main {
+  background-color: lightcyan;
+  clear: both;
+
 }
