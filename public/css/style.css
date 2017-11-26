@@ -8,6 +8,22 @@ body {
     width: 600px;
     margin: 0 auto;
   }
+h1 {
+    color: cornflowerblue;
+}
+
+.navbar {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.navbar-inverse {
+    background-color: rgba(100, 150, 237, 0.26);
+    border-color: white;
+  }
+  .panel {
+      border: 0px;
+  }
+  
   fieldset {
     display: block;
     -webkit-margin-start: 0px;
@@ -30,8 +46,6 @@ body {
     font-weight:300;
     width: 100%;
     font-size: 25px;
-    border:0px;
-    outline: none;
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -53,9 +67,6 @@ body {
   .ghost-button {
     background-color: cornflowerblue;
     border:2px solid #ddd;
-    padding:10px 30px;
-    width: 100%;
-    min-width: 350px;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
@@ -64,6 +75,7 @@ body {
   }
   .ghost-button:hover {
     border:2px solid #515151;
+    background-color: cornflowerblue;
   }
   p {
     color: cornflowerblue;

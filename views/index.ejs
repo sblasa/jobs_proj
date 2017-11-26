@@ -1,88 +1,93 @@
 <% include partials/head %>
 
-<body>
-  <header>
-      <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-              <div class="container">
-                  <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                  </div>
-          
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav">
-                          <li><a href="/">Home</a></li>
-                          <li><a href="/">Jobs</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-  </header>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
 
-  
-  <div class="three-quarter-width center-block container-fluid">
-     
-      <main>
-          <div class="col-md-6 panel panel-default">
-                <fieldset>
-              <div class="panel-heading">
-                  <h1>Search Jobs</h1>
-              </div>
-              <div class="panel-body">
-                    <fieldset> 
-                  <form action="#" method="POST">
-         <div class="bucket description">
-        <div class="field">
-          <label for="description_field" class="placeholder ghost-input">Enter in title, benefits, companies, expertise</label>
-          <input id="description_field" name="description" class="ghost-input" type="text" value="" />
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="https://jobs.github.com/">GitHub Jobs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="three-quarter-width center-block container-fluid">
+
+            <main>
+                <div class="col-md-6 panel panel-default">
+                    <fieldset>
+                        <div class="panel-heading">
+                            <h1>Search Jobs</h1>
+                        </div>
+                        <div class="panel-body">
+
+                                <form action="#" method="POST">
+                                    <div class="bucket description">
+                                        <div class="field">
+                                            <label for="description_field" class="placeholder ghost-input">Enter in title, benefits, companies, expertise</label>
+                                            <input id="description_field" name="description" class="ghost-input" type="text" value="" />
+                                        </div>
+                                    </div>
+                        </div>
+
+                        <button type="button" id="findSomeJobs" class="btn btn-success ghost-button">Search</button>
+                        <button type="button" id="clear-button" class="btn btn-info">Clear</button>
+                        </form>
+                </div>
+
+                <div id="jobs-list-panel" class="col-md-6 panel panel-default">
+                        <div class="panel-heading">
+                            <h1>Job Results</h1>
+                        </div>
+                        <div class="panel-body">
+                            <ul id="job-results" class="list-group">
+                            </ul>
+                        </div>
+                    </div>
+
         </div>
+
+
+        </fieldset>
+
+
+        <div class="col-md-12 panel panel-default">
+            <div class="panel-heading">
+                <h1>Job Information</h1>
+            </div>
+            <div class="panel-body image" id="job-info">
+
+            </div>
+
         </div>
-      </div>
 
-                      <button type="button" id="findSomeJobs" class="btn btn-success ghost-button">Search</button>
-                      <button type="button" id="clear-button" class="btn btn-info">Clear</button>
-                  </form>
-              </div>
-          </div>
-     </fieldset>            
-          <div id="jobs-list-panel" class="col-md-6 panel panel-default">
-              <div class="panel-heading">
-                  <h1>Job Results</h1>
-                  <p> </p>
-              </div>
-              <div class="panel-body">
-                  <ul id="job-results" class="list-group">
-                  </ul>
-              </div>
-          </div>
+        </main>
 
-          <div class="col-md-6 panel panel-default">
-              <div class="panel-heading">
-                  <h1>Job Information</h1>
-              </div>
-              <div class="panel-body image" id="job-info">
-                   
-              </div>
+        </div>
 
-          </div>
- 
-      </main>
- 
-  </div>
-  <footer>
-      
-  </footer>        
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="/js/something.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="/js/jobs.js"></script>
 
 
-    <% include partials/foot %>
+        <% include partials/foot %>
