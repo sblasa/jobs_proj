@@ -8,6 +8,7 @@ $(function(){
         jobInfo = document.getElementById("job-info"),
         nJobSearchUri;
         
+        
     var createJobList = function(jobData){
         jobsList.innerHTML = "";
         if(jobData == ""){
@@ -26,7 +27,8 @@ $(function(){
                 addJobLink.innerText = job.title;
                 addJobLink.href = "#";
                 //addJobLink.href =job.url;
-               // addJobLink.href ="jobresults/"+ job.id;
+               // addJobLink.href ="jobresults/"+ job.id;           
+
                 addJobLink.addEventListener("click", function(){ 
                     jobInfo.innerHTML = "";     
                     var jobLink = document.createElement("a"),
@@ -40,12 +42,15 @@ $(function(){
                         jobLink.href = job.company_url;
                     jobInfo.appendChild(jobDiv);
                     jobInfo.appendChild(jobLink);
-                });
-                                            
+
+                });                                              
                 jobItem.appendChild(addJobLink);
                 jobsList.appendChild(jobItem);
+             
             });
+        
         };    
+
 
 
     lookForJobs.addEventListener("click", function(){
@@ -53,7 +58,7 @@ $(function(){
         $.getJSON(nJobSearchUri, function(returnData){
             // alert(returnData[0].title);
             createJobList(returnData);
-            
+           
         });
     });
 
