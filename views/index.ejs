@@ -35,27 +35,27 @@
                 <div class="col-md-6 panel panel-default">
                     <fieldset>
                         <div class="panel-heading">
-                            <h1>Search Jobs</h1>
+                            <h1>What type of jobs are you looking for?</h1>
                         </div>
                         <div class="panel-body">
 
                                 <form action="#" method="POST">
                                     <div class="bucket description">
                                         <div class="field">
-                                            <label for="description_field" class="placeholder ghost-input">Enter in title, benefits, companies, expertise</label>
+                                            <label for="description_field" class="placeholder ghost-input">Enter in title, benefits, companies, or expertise</label>
                                             <input id="description_field" name="description" class="ghost-input" type="text" value="" />
                                         </div>
                                     </div>
                         </div>
 
-                        <button type="button" id="findSomeJobs" class="btn btn-success ghost-button">Search</button>
-                        <button type="button" id="clear-button" class="btn btn-info">Clear</button>
+                        <button type="button" id="findSomeJobs" class="btn btn-success ghost-button">Find Me a Job!</button>
+                        <button type="button" id="clear-button" class="btn btn-info">Reset</button>
                         </form>
                 </div>
 
                 <div id="jobs-list-panel" class="col-md-6 panel panel-default">
                         <div class="panel-heading">
-                            <h1>Job Results</h1>
+                            <h1 id="job-list">Job Listings</h1>
                         </div>
                         <div class="panel-body">
                             <ul id="job-results" class="list-group">
@@ -70,8 +70,8 @@
 
 
         <div class="col-md-12 panel panel-default">
-            <div class="panel-heading">
-                <h1>Job Information</h1>
+            <div class="panel-heading" tabindex="0">
+                <h1 id="job-details">Job Details</h1>
             </div>
             <div class="panel-body image" id="job-info">
 
@@ -82,12 +82,7 @@
         </main>
 
         </div>
-
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-        <script src="/js/jobs.js"></script>
+  
 
 
         <% include partials/foot %>

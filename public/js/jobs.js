@@ -3,6 +3,8 @@ $(function(){
         lookForJobs = document.getElementById("findSomeJobs"),
         jobsList = document.getElementById("job-results"),
         clearButton = document.getElementById("clear-button"),
+        jobTitle = document.getElementById("job-details"),   
+        jobExpandList = document.getElementById("job-list"),              
         jobSearchUri = "https://jobs.github.com/positions.json?description={{title}}&callback=?",
         
         jobInfo = document.getElementById("job-info"),
@@ -20,35 +22,40 @@ $(function(){
         jobData.forEach(function(job){
             var jobItem = document.createElement("li"),
                 addJobLink = document.createElement("a");
+             
                                
 
                 jobItem.classList.add("list-group-item");
-                
                 addJobLink.innerText = job.title;
                 addJobLink.href = "#";
                 //addJobLink.href =job.url;
                // addJobLink.href ="jobresults/"+ job.id;           
 
                 addJobLink.addEventListener("click", function(){ 
-                    jobInfo.innerHTML = "";     
+                    jobInfo.innerHTML = "";                
+    
                     var jobLink = document.createElement("a"),
                         jobDiv = document.createElement("div");
                         jobDiv.innerHTML = job.description;
+                        jobExpandList.innerText = "Job Listings for " + searchJobValue.value + " ";                       
+                        jobTitle.innerText = "Job Details for: " + job.title + " ";
                         jobLink.innerText = "Company Website";
                         jobLink.classList.add("btn");
                         jobLink.classList.add("btn-primary");
-
                     
                         jobLink.href = job.company_url;
                     jobInfo.appendChild(jobDiv);
                     jobInfo.appendChild(jobLink);
+  
 
                 });                                              
                 jobItem.appendChild(addJobLink);
                 jobsList.appendChild(jobItem);
+              
+              
              
             });
-        
+
         };    
 
 
@@ -58,6 +65,7 @@ $(function(){
         $.getJSON(nJobSearchUri, function(returnData){
             // alert(returnData[0].title);
             createJobList(returnData);
+             
            
         });
     });
@@ -65,7 +73,9 @@ $(function(){
     clearButton.addEventListener("click", function(){
         jobsList.innerHTML = "";
         searchJobValue.value = "";
+        jobExpandList.innerText = "Job Listings";        
         jobInfo.innerHTML = "";
+        jobTitle.innerText ="Job Details";
     });
 
 });
