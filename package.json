@@ -1,6 +1,6 @@
 {
   "name": "jobs-proj",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -10,8 +10,21 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
-    "express": "~4.15.5",
-    "morgan": "~1.9.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
     "serve-favicon": "~2.4.5"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sblasa/jobs_proj.git"
+  },
+  "author": "Sussette Blasa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sblasa/jobs_proj/issues"
+  },
+  "homepage": "https://github.com/sblasa/jobs_proj#readme",
+  "description": ""
 }
